@@ -1,0 +1,116 @@
+{
+    "users": {
+        "f3fd34ad-eeb3-4626-b84d-c3ee6d32c17c": {
+            "user_id": "f3fd34ad-eeb3-4626-b84d-c3ee6d32c17c",
+            "username": "JYO",
+            "email": "jyoshitha2026@gmail.com",
+            "password": "$2b$12$OtNJoBhlC1f9/.iXoG6.eOOKVKd505NfDLiaG/M0zEzAfZ5gaLqB.",
+            "role": "trader",
+            "2fa": true,
+            "totp_secret": "2G5LHWYGZ5JCTWEUMZ5LVTA2KMEHAD4E"
+        },
+        "b334e427-bda2-4b2e-8baa-d5cc22435581": {
+            "user_id": "b334e427-bda2-4b2e-8baa-d5cc22435581",
+            "username": "g",
+            "email": "gi@gmail.com",
+            "password": "$2b$12$MbKpglDqP1LHlesRhpUG5ejd86jQHuy7d.5I2ZBTGNIcqBuhGiAra",
+            "role": "admin",
+            "2fa": false,
+            "totp_secret": "6OK2TXNZLRVWBEO3NV7YO2A22I66GRG4"
+        },
+        "5fa1c57b-fcf7-4bcd-ad14-e26abefbc6d9": {
+            "user_id": "5fa1c57b-fcf7-4bcd-ad14-e26abefbc6d9",
+            "username": "John",
+            "email": "john@gmail.com",
+            "password": "$2b$12$trI4LretMl6k5KpZaqwE6eC8pjaLH9JIE/CoXaJf37n.jF4VNGBQW",
+            "role": "admin",
+            "2fa": true,
+            "totp_secret": "HH7WOPWGYV5CBLH5VD5B6JM7DOIN4MZ2"
+        },
+        "921895d4-0bae-48a7-a7cc-ac4f8df50040": {
+            "user_id": "921895d4-0bae-48a7-a7cc-ac4f8df50040",
+            "username": "vyshu",
+            "email": "vyshu@gmail.com",
+            "password": "$2b$12$/K96Y2D6HUtFsEwM6nzdYO8vPy4DN0NUKArLK42OEkY7V13CnHcca",
+            "role": "admin",
+            "2fa": true,
+            "totp_secret": "FWLKLROJGEEE6APGTHYEQ4EKO2XHWL2K"
+        },
+        "19e0f091-db67-474c-ab58-7297beae8715": {
+            "user_id": "19e0f091-db67-474c-ab58-7297beae8715",
+            "username": "vyshu",
+            "email": "vyshu2@gmail.com",
+            "password": "$2b$12$IhOSfBsMCJp9J3TC4EzCceHxENcwFAqUnWSMIGUO0sarQqeUmZsxu",
+            "role": "admin",
+            "2fa": true,
+            "totp_secret": "4PXAM6REU7RI2NM5N3BK5QZ3RZC5XGRW"
+        },
+        "227cbbf9-cc12-4a37-b5b9-f91403532b5f": {
+            "user_id": "227cbbf9-cc12-4a37-b5b9-f91403532b5f",
+            "username": "vyshu",
+            "email": "vyshu3@gmail.com",
+            "password": "$2b$12$OBvC0VH2RGdrA.Yk1uadrOoXVm3WFM2fsPGZbpqmoBZgmf.1NtnZG",
+            "role": "admin",
+            "2fa": true,
+            "totp_secret": "UAFGKVY7V5XZU67SQ56ZAKK7WH4SFYIC"
+        }
+    },
+    "trades": [
+        {
+            "trade_id": "TRD-AA40F7",
+            "user_id": "5fa1c57b-fcf7-4bcd-ad14-e26abefbc6d9",
+            "secure_data": {
+                "encrypted_data": "Xmf+nRaRmocvDyafXkMI6/kqbrBTY0oQqQn5HbJsoFTaBKT2nORTeacYP65aF6y9ZcUzYFoISQEgRZQhVVAyQCsIU3aOTWxwo/yXFYrnX1vOv+2kzia5o0iQqvGkQMvfvzmZoTuh0XFN8WHVuxniZwwUZpuosxK3lrN7TGVluC737G9dhNT1icFFEjgllbV/0RuOpFC0hFwtVNULMmcMJpPGIZD0TyBYKPSPTAnca0ZO4kghEEtVcYbCzDvTmHy6",
+                "iv": "0tZt4rtYX3h2XWRYw4WThg=="
+            },
+            "integrity_signature": "e364bb9418cace58059a3fd86a868e83852b550268431436e3ab5af279ce98a0"
+        },
+        {
+            "trade_id": "TRD-4BCEE6",
+            "user_id": "5fa1c57b-fcf7-4bcd-ad14-e26abefbc6d9",
+            "secure_data": {
+                "encrypted_data": "CAfVjR4eklWVpgZKwYvGY1vPzE1ksebuu/dLGyEPYXrjRShGZHubJNWcPqKktwUZ+7N3DW/n/uS6UNSUu9b7kpdvy8wIXsIoHZGGrcOTzMxe0YIh+Qm/x4nyRBJsvDz+UgIvMw2Fr1+nocmg6p5NHe7E9qWrCCQ9mLUcImk/YG/G2sGUMUCsQTMXJECPRPZ5bXNIzytv83k40IMxc2MQUbB4ASoxbe+CBnCdBNEoWmtOV39Qh79EI4OjhZI2FXyr",
+                "iv": "6jUqfAjU/kM4Mn8dQmabvA=="
+            },
+            "integrity_signature": "21d29ba3da89afc8f4349cf451623384c88912562cd5d9b80b6718cbd715919c"
+        },
+        {
+            "trade_id": "TRD-237ED5",
+            "user_id": "5fa1c57b-fcf7-4bcd-ad14-e26abefbc6d9",
+            "secure_data": {
+                "encrypted_data": "ye/K57YmgpiJvkm2gABQqEeRA7FnC1m2AOkzg4AfTGNKay0EKBJ7H/+wD6/SEJnCNbEj4OWsmemkcPX6xEpQbJ5p7PR8EQouhrzSDXpou5kE64AkNHqqwLTe4BY7cdegndZV3Qz2qBoiMyWDRjuM498ieLU4bv9qB6och8UrhpB8zi80RuRIpOPCP6KRGeBzpysxyE29mgZKfHmif8Bwh2bU4FoLqKGDlNmzbBwScJmiV0iW7AE3/unxzVVc9F17X42noYlSGeDMZXLIyry/cw==",
+                "iv": "HdlgqaRyjvtZHbNz9A7+Ow=="
+            },
+            "integrity_signature": "d41bf32f6312c5fa8df661027fb407013b391ccbac074fd631e392d795cfdd13"
+        },
+        {
+            "trade_id": "TRD-27D012",
+            "user_id": "5fa1c57b-fcf7-4bcd-ad14-e26abefbc6d9",
+            "secure_data": {
+                "encrypted_data": "kRF98L78KUUuNGIvS/8w89QGXl89joiPt5WOk8PdACSM7EKnZPAI9yZtIFurSOU2bNg1PA9rk0zq6z+Y4hiEjGpRC0ZjLyK0LqMIy2bRoHbakYzCIG08+4sjMriVSVaHoTVO9JGiW/1WyVBOKgKoxn1g+0UlVIytMuytzrNMHKymLYw4tOFcxqbr81FwNiKtMgZ00V1rueKytZuIlkEdPXYIm6sIzSNtrHcpFZ4m03ID4Xk046fcGZBg56nU4+lK",
+                "iv": "xduly1Edx/pEx8U7W7CsQA=="
+            },
+            "integrity_signature": "5f2e8f98bdcade41f41ea9c8f4ad29462402f154a06d534a53cbe8d3cb0c0cc8"
+        },
+        {
+            "trade_id": "TRD-CA2696",
+            "user_id": "227cbbf9-cc12-4a37-b5b9-f91403532b5f",
+            "secure_data": {
+                "encrypted_data": "yjK+2gmuTyJAsL+4AH/uPw4d34TwQk9uIfUUJrcSIDCQdz+BBt0T1CuqaGy6u6MxFGHVQdcLqaaTLRPA19s1B+Z3Sbhf0RT3Le9DfoTIIFhoYwux+qeidWtcdcu977TS28WGMhC/tDwJ1rBDRZu0F9RVwDUUBzZNnXunklr1XdnaxFi6AoGbzq1Sc59ybAripSYSF4p0sjal0WiqyESoWtDpgrEdLATqs+2T/mH7RLUAth8iyUgKSGj4QB1wJCwU",
+                "iv": "5lh8jX8tRS6oM9EG7qHXwQ=="
+            },
+            "integrity_signature": "3324604a3e7caf38078cf8515b70e535d1056b730a432657ce0e7323c291e391"
+        }
+    ],
+    "transactions": [
+        {
+            "id": "TX-63CE56",
+            "user_id": "227cbbf9-cc12-4a37-b5b9-f91403532b5f",
+            "type": "Deposit",
+            "amount": 1000,
+            "status": "Done",
+            "raw_note": "IlNhdmluZ3Mi",
+            "timestamp": "Feb 08"
+        }
+    ]
+}

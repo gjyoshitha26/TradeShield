@@ -1,21 +1,27 @@
-import bcrypt, hmac, hashlib, json
-from config import Config
+import bcrypt
+import hmac
+import hashlib
+import json
 
 def hash_pass(password):
-    salt = bcrypt.gensalt(rounds=Config.BCRYPT_ROUNDS)
-    return {'hash': bcrypt.hashpw(password.encode(), salt).decode(), 'salt_rounds': Config.BCRYPT_ROUNDS}
+    salt = bcrypt.gensalt(rounds=12)
+    hashed = bcrypt.hashpw(password.encode(), salt)
+    return {
+        'hash': hashed.decode(),
+        'salt_rounds': 12
+    }
 
 def verify_pass(password, hashed):
-    h = hashed.encode() if isinstance(hashed, str) else hashed
-    return {'verified': bcrypt.checkpw(password.encode(), h)}
+    return {
+        'verified': bcrypt.checkpw(password.encode(), hashed.encode())
+    }
 
 def sign(data):
-    txt = json.dumps(data, sort_keys=True) if isinstance(data, dict) else str(data)
-    sig = hmac.new(Config.SIGNATURE_KEY.encode(), txt.encode(), hashlib.sha256).hexdigest()
-    return {'signature': sig, 'data_hash': hashlib.sha256(txt.encode()).hexdigest()}
+    msg = json.dumps(data).encode()
+    signature = hmac.new(b'secret-key', msg, hashlib.sha256).hexdigest()
+    return {'signature': signature}
 
-def verify_sig(data, sig):
-    txt = json.dumps(data, sort_keys=True) if isinstance(data, dict) else str(data)
-    expected = hmac.new(Config.SIGNATURE_KEY.encode(), txt.encode(), hashlib.sha256).hexdigest()
-    valid = hmac.compare_digest(sig, expected)
-    return {'signature_valid': valid, 'integrity_verified': valid}
+def verify_sig(data, signature):
+    msg = json.dumps(data).encode()
+    expected = hmac.new(b'secret-key', msg, hashlib.sha256).hexdigest()
+    return {'signature_valid': hmac.compare_digest(signature, expected)}

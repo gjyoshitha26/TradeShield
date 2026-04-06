@@ -1,14 +1,18 @@
-import jwt, time
-from config import Config
+import jwt
+import datetime
 
-EXPIRY = {'login': Config.JWT_LOGIN_EXPIRY, 'auth': Config.JWT_AUTH_EXPIRY, 'refresh': Config.JWT_REFRESH_EXPIRY}
+SECRET = 'jwt-secret-key'
 
-def gen_token(payload, ttype='auth'):
-    data = {**payload, 'type': ttype, 'iat': int(time.time()), 'exp': int(time.time()) + EXPIRY.get(ttype, 3600)}
-    return jwt.encode(data, Config.JWT_SECRET, algorithm='HS256')
+def gen_token(payload, type_='auth'):
+    payload['type'] = type_
+    payload['exp'] = datetime.datetime.utcnow() + datetime.timedelta(hours=1)
+    return jwt.encode(payload, SECRET, algorithm='HS256')
 
-def verify_token(token, expected=None):
+def verify_token(token, required_type='auth'):
     try:
-        p = jwt.decode(token, Config.JWT_SECRET, algorithms=['HS256'])
-        return p if not expected or p.get('type') == expected else None
-    except: return None
+        payload = jwt.decode(token, SECRET, algorithms=['HS256'])
+        if payload.get('type') != required_type:
+            return None
+        return payload
+    except:
+        return None
